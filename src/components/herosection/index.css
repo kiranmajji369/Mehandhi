@@ -1,0 +1,111 @@
+/* HeroSection.css */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://c1.wallpaperflare.com/preview/489/1014/368/mehndi-henna-indian-wedding-hand.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px) brightness(75%);
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    padding: 0 2.5rem;
+  }
+}
+
+.hero-image {
+  width: 270px;
+  margin-top: 3.5rem;
+  border-radius: 1rem;
+  border: 2px solid #f9c74f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 640px) {
+  .hero-image {
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    width: 450px;
+    margin-left: 2rem;
+  }
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    text-align: left;
+  }
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #d4af37, #ffd700, #ffcc00);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0px black;
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+}
+
+.hero-subtext {
+  font-size: 1.25rem;
+  color: #ffe8d6;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-subtext {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-button {
+  background-color: #317fa1;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 2px 2px 0px black;
+  transition: background-color 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #f3722c;
+}

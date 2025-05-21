@@ -1,0 +1,33 @@
+/* HomePage.css */
+
+.homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 5rem;
+  padding: 0 1rem;
+}
+
+.hero-section,
+.services-section,
+.about-section,
+.gallery-section {
+  padding: 2rem 0;
+}
+
+/* Optional: Add background colors or section spacing for design */
+.hero-section {
+  background-color: #f8f9fa;
+}
+
+.services-section {
+  background-color: #fff;
+}
+
+.about-section {
+  background-color: #f3f4f6;
+}
+
+.gallery-section {
+  background-color: #fff;
+}

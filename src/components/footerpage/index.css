@@ -1,0 +1,158 @@
+/* index.css */
+
+.footer {
+  background-color: #296087;
+  color: #FFFFF0;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.footer-logo {
+  margin: 0 auto;
+}
+
+.footer-logo-img {
+  width: 8rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 500px;
+}
+
+.footer-heading {
+  position: relative;
+  width: fit-content;
+}
+
+.footer-heading h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-underline {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 2.5rem;
+  height: 0.5rem;
+  background-color: #DAA520;
+}
+
+.footer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-icon {
+  font-size: 1.25rem;
+}
+
+.footer-note {
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: #ffffff55;
+  margin: 2rem 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+}
+
+.footer-link {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social-icon {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.facebook {
+  background-color: rgba(59, 89, 152, 0.8);
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+}
+
+.instagram {
+  background-color: rgba(59, 89, 152, 0.8);
+}
+
+.instagram:hover {
+  background-color: #3f729b;
+}
+
+.youtube {
+  background-color: rgba(220, 38, 38, 0.8);
+}
+
+.youtube:hover {
+  background-color: #dc2626;
+}
+
+.linkedin {
+  background-color: rgba(29, 78, 216, 0.8);
+}
+
+.linkedin:hover {
+  background-color: #1d4ed8;
+}
+
+.twitter {
+  background-color: rgba(37, 99, 235, 0.8);
+}
+
+.twitter:hover {
+  background-color: #2563eb;
+}

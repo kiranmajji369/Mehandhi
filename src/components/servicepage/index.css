@@ -1,0 +1,96 @@
+.services-page {
+  padding-top: 130px;
+  padding-bottom: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #daa520;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title-container {
+  position: relative;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title-underline {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 5px;
+  background-color: #daa520;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.description-section {
+  flex: 1;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.highlight {
+  color: #daa520;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.image-preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.main-image {
+  width: 80%;
+  height: 30rem;
+  object-fit: cover;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+
+.related-container {
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.related-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.related-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.related-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+}
