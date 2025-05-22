@@ -1,113 +1,182 @@
-/* ContactUs.css */
-.contact-container {
-  margin-top: 8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+.nm-contact-container {
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #fefefe;
+  color: #333;
 }
 
-.section-header {
-  position: relative;
-  width: fit-content;
+.nm-contact-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.nm-contact-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nm-contact-underline {
+  width: 80px;
+  height: 3px;
+  background-color: #f8c146;
   margin: 0 auto;
-  text-align: center;
-  font-size: 1.875rem;
-  font-weight: bold;
 }
 
-.section-header span {
-  position: absolute;
-  bottom: -1rem;
-  left: 0;
-  width: 2.5rem;
-  height: 0.5rem;
-  background-color: #daa520;
-}
-
-.form-wrapper {
+.nm-contact-map {
   width: 100%;
-  padding: 0.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
 }
 
-.form-group {
+.nm-contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nm-contact-form-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.nm-contact-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.nm-contact-form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.form-group input,
-.form-group textarea {
+.nm-contact-form input,
+.nm-contact-form textarea {
+  padding: 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 0.375rem;
-  padding: 0.5rem;
-  outline: none;
+  border-radius: 5px;
 }
 
-.send-btn {
-  background-color: #daa520;
-  color: white;
-  padding: 0.5rem 0;
-  border-radius: 0.375rem;
+.nm-contact-button {
+  padding: 0.8rem;
+  background-color: #f8c146;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.contact-info {
-  text-align: center;
-  font-size: 0.875rem;
-  color: #71717a;
-  padding: 0 2.5rem;
+.nm-contact-button:hover {
+  background-color: #e0aa3e;
 }
 
-.social-icons {
+.nm-contact-details {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.nm-contact-socials {
   display: flex;
+  gap: 1rem;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  color: white;
 }
 
-.icon-wrapper {
-  padding: 0.5rem;
-  border-radius: 9999px;
-  cursor: pointer;
+.nm-icon {
+  font-size: 1.8rem;
+  color: #333;
+  transition: color 0.3s;
 }
 
-.icon-facebook {
-  background-color: rgba(59, 130, 246, 0.8);
+.nm-icon.facebook:hover {
+  color: #3b5998;
+}
+.nm-icon.instagram:hover {
+  color: #e1306c;
+}
+.nm-icon.youtube:hover {
+  color: #ff0000;
+}
+.nm-icon.linkedin:hover {
+  color: #0e76a8;
+}
+.nm-icon.twitter:hover {
+  color: #1da1f2;
 }
 
-.icon-facebook:hover {
-  background-color: rgb(59, 130, 246);
+/* Responsive */
+@media (max-width: 768px) {
+  .nm-contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nm-contact-form-box {
+    width: 100%;
+  }
+
+  .nm-contact-socials {
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
 
-.icon-instagram {
-  background-color: rgba(59, 130, 246, 0.8);
+@media (max-width: 576px) {
+  .nm-contact-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .nm-contact-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .nm-contact-underline {
+    width: 60px;
+    height: 3px;
+  }
+
+  .nm-contact-map {
+    height: 300px;
+    border-radius: 5px;
+  }
+
+  .nm-contact-form-box {
+    padding: 0;
+    width: 100%;
+  }
+
+  .nm-contact-title {
+    font-size: 1.3rem;
+  }
+
+  .nm-contact-form input,
+  .nm-contact-form textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .nm-contact-button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .nm-contact-details {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .nm-contact-socials {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .nm-icon {
+    font-size: 1.5rem;
+  }
 }
 
-.icon-instagram:hover {
-  background-color: rgb(59, 130, 246);
-}
-
-.icon-youtube {
-  background-color: rgba(220, 38, 38, 0.8);
-}
-
-.icon-youtube:hover {
-  background-color: rgb(220, 38, 38);
-}
-
-.icon-linkedin {
-  background-color: rgba(29, 78, 216, 0.8);
-}
-
-.icon-linkedin:hover {
-  background-color: rgb(29, 78, 216);
-}
-
-.icon-twitter {
-  background-color: rgba(37, 99, 235, 0.8);
-}
-
-.icon-twitter:hover {
-  background-color: rgb(37, 99, 235);
-}

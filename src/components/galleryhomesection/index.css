@@ -1,67 +1,109 @@
-.gallery-home-section {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 5rem;
+.jaipuri-gallery-home {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
 }
 
-.gallery-heading-wrapper {
-  position: relative;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.gallery-heading {
-  font-size: 1.875rem; /* Equivalent to text-3xl */
-  font-weight: bold;
+.jaipuri-gallery-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.gallery-underline {
-  position: absolute;
-  bottom: -1rem;
-  left: 0;
-  width: 2.5rem;
-  height: 0.5rem;
-  background-color: #DAA520;
+.jaipuri-gallery-title {
+  font-size: 2.5rem;
+  color: #2f4858;
+  margin-bottom: 0.5rem;
 }
 
-.gallery-images-section {
+.jaipuri-gallery-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #e07a5f;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.jaipuri-gallery-body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.gallery-images-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+.jaipuri-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2.1rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 2rem;
 }
 
-.gallery-img {
-  width: 16rem; /* 64 * 0.25rem = 16rem */
-  height: 16rem;
-  border-radius: 0.5rem;
+.jaipuri-gallery-img {
+  width: 100%;
+  height: 250px;
   object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.438);
   transition: transform 0.3s ease;
 }
 
-.gallery-img:hover {
-  transform: scale(1.02);
+.jaipuri-gallery-img:hover {
+  transform: scale(1.03);
 }
 
-.gallery-button {
-  background-color: rgba(236, 187, 74, 0.8);
-  padding: 0.5rem 0.75rem;
+.jaipuri-gallery-button {
+  background-color: #e2ba37;
   color: white;
-  font-size: 0.875rem;
-  border-radius: 9999px;
-  margin-top: 2.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
   text-decoration: none;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
-.gallery-button:hover {
-  background-color: #ecbb4a;
+/* Hover effect */
+.jaipuri-gallery-button:hover {
+  background-color: #d1664e;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .jaipuri-gallery-title {
+    font-size: 2.2rem;
+  }
+
+  .jaipuri-gallery-img {
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .jaipuri-gallery-home {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .jaipuri-gallery-title {
+    font-size: 1.75rem;
+  }
+
+  .jaipuri-gallery-underline {
+    width: 60px;
+    height: 3px;
+  }
+
+  .jaipuri-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .jaipuri-gallery-img {
+    height: 150px;
+  }
+
+  .jaipuri-gallery-button {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
 }

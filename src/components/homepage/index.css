@@ -1,33 +1,138 @@
-/* HomePage.css */
-
-.homepage-wrapper {
+.jaipuri-homepage-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5rem;
   margin-top: 5rem;
-  padding: 0 1rem;
 }
 
-.hero-section,
-.services-section,
-.about-section,
-.gallery-section {
+.jaipuri-hero-section {
   padding: 2rem 0;
-}
-
-/* Optional: Add background colors or section spacing for design */
-.hero-section {
   background-color: #f8f9fa;
 }
 
-.services-section {
-  background-color: #fff;
+/* Combined Section Styling */
+.jaipuri-combined-section {
+  padding: 2rem 0;
+  background-color: #ffffff;
 }
 
-.about-section {
-  background-color: #f3f4f6;
+.jaipuri-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.gallery-section {
-  background-color: #fff;
+/* Optional: If each imported section renders a card, ensure they have consistent card class names */
+.jaipuri-cards-container > * {
+  flex: 1 1 300px; /* Responsive card width */
+  max-width: 400px;
 }
+
+
+/* Base styles from your code */
+.jaipuri-homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 3.4rem;
+}
+
+.jaipuri-hero-section {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+.jaipuri-combined-section {
+  padding: 2rem 0;
+  background-color: #ffffff;
+}
+
+.jaipuri-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.jaipuri-cards-container > * {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 767px) {
+  .jaipuri-homepage-wrapper {
+    margin-top: 3rem;
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  /* For cards container on mobile, stack cards vertically */
+  .jaipuri-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .jaipuri-cards-container > * {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Adjust padding for each section if needed */
+  .jaipuri-hero-section,
+  .jaipuri-services-section,
+  .jaipuri-about-section,
+  .jaipuri-gallery-section {
+    padding: 1.5rem 0;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .jaipuri-homepage-wrapper {
+    margin-top: 3rem;
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  .jaipuri-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .jaipuri-cards-container > * {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Padding adjustment for sections */
+  .jaipuri-hero-section,
+  .jaipuri-services-section,
+  .jaipuri-about-section,
+  .jaipuri-gallery-section {
+    padding: 1.5rem 0;
+  }
+
+  /* Optional: Add consistent horizontal max width for overall wrapper */
+  .jaipuri-homepage-wrapper {
+    max-width: 480px; /* Keeps content from getting too wide on bigger phones */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Optional: Improve section spacing and text alignment */
+  .jaipuri-hero-section,
+  .jaipuri-services-section,
+  .jaipuri-about-section,
+  .jaipuri-gallery-section {
+    text-align: center; /* If content is mostly text-heavy, center aligns it */
+  }
+}
+

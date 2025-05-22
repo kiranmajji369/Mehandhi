@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-// import logo from "../images/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
@@ -25,20 +24,20 @@ const Header = () => {
   }, [isServicesOpen]);
 
   return (
-    <nav className="header">
-      <div className="header-container">
-        <img src="/images/logo.png" alt="Logo" className="header-logo" />
-        <div className={`nav-menu ${isNavOpen ? "open" : ""}`}>
-          <ul className={`nav-list ${isNavOpen ? "mobile" : ""}`}>
-            <li><NavLink to="/" onClick={() => setIsNavOpen(false)}>Home</NavLink></li>
+    <nav className="jaipuri-header">
+      <div className="jaipuri-header-container">
+        <img src="/images/logo.png" alt="Logo" className="jaipuri-header-logo" />
+        <div className={`jaipuri-nav-menu ${isNavOpen ? "open" : ""}`}>
+          <ul className={`jaipuri-nav-list ${isNavOpen ? "mobile" : ""}`}>
+            <li><NavLink to="/homepage" onClick={() => setIsNavOpen(false)}>Home</NavLink></li>
             <li><a href="/aboutpage" onClick={() => setIsNavOpen(false)}>About Us</a></li>
             <li><NavLink to="/gallery" onClick={() => setIsNavOpen(false)}>Gallery</NavLink></li>
-            <li className="dropdown">
-              <div onClick={() => setIsServicesOpen(prev => !prev)} className="dropdown-toggle">
+            <li className="jaipuri-dropdown">
+              <div onClick={() => setIsServicesOpen(prev => !prev)} className="jaipuri-dropdown-toggle">
                 <NavLink to="#">Services</NavLink>
                 <span>{isServicesOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}</span>
               </div>
-              <div className={`dropdown-menu ${isServicesOpen ? "show" : ""}`}>
+              <div className={`jaipuri-dropdown-menu ${isServicesOpen ? "show" : ""}`}>
                 {services.map(service => (
                   <span key={service.to}>
                     <NavLink
@@ -57,7 +56,7 @@ const Header = () => {
             <li><NavLink to="/contact-us" onClick={() => setIsNavOpen(false)}>Contact Us</NavLink></li>
           </ul>
         </div>
-        <div className="menu-icon" onClick={() => setIsNavOpen(prev => !prev)}>
+        <div className="jaipuri-menu-icon" onClick={() => setIsNavOpen(prev => !prev)}>
           {isNavOpen ? <RxCross1 /> : <GiHamburgerMenu />}
         </div>
       </div>

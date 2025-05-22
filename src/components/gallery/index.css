@@ -1,52 +1,94 @@
-.gallery-wrapper {
-  padding: 0 0.5rem;
-  margin-top: 8rem;
-}
-
-.gallery-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.jaipuri-gallery-wrapper {
+  padding: 4rem 1rem;
+  background-color: #fff9f5;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.gallery-heading {
-  position: relative;
-  text-align: center;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.gallery-heading h2 {
-  font-size: 1.875rem; /* 30px */
-  font-weight: bold;
-}
-
-.heading-underline {
-  position: absolute;
-  bottom: -1rem;
-  left: 0;
-  width: 2.5rem;
-  height: 0.5rem;
-  background-color: #DAA520;
-}
-
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
   justify-content: center;
-  align-items: center;
 }
 
-.gallery-image {
-  width: 15rem; /* 240px */
-  height: 18rem; /* 288px */
-  border-radius: 0.5rem;
-  transition: box-shadow 0.2s ease;
+.jaipuri-gallery-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.gallery-image:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+.jaipuri-gallery-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.jaipuri-gallery-title {
+  font-size: 2.75rem;
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.jaipuri-heading-underline {
+  display: block;
+  width: 90px;
+  height: 5px;
+  margin: 0 auto;
+  background-color: #d35400;
+  border-radius: 5px;
+}
+
+.jaipuri-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.jaipuri-gallery-image {
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(211, 84, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jaipuri-gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(211, 84, 0, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .jaipuri-gallery-title {
+    font-size: 2.2rem;
+  }
+
+  .jaipuri-gallery-image {
+    height: 150px;
+  }
+
+  .jaipuri-heading-underline {
+    width: 70px;
+    height: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jaipuri-gallery-title {
+    font-size: 1.75rem;
+  }
+
+  .jaipuri-gallery-image {
+    height: 120px;
+  }
+
+  .jaipuri-gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .jaipuri-heading-underline {
+    width: 60px;
+    height: 3px;
+  }
 }

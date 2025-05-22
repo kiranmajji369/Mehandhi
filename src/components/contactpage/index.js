@@ -31,110 +31,76 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-container">
-      <div className="section-header">
-        <h2>Contact us</h2>
-        <span></span>
+    <div className="nm-contact-container">
+      <div className="nm-contact-header">
+        <h2>Contact Us</h2>
+        <span className="nm-contact-underline"></span>
       </div>
 
       <iframe
         src="https://www.google.com/maps/embed?pb=..."
-        className="w-full mx-auto"
+        className="nm-contact-map"
         height="450"
         style={{ border: 0 }}
         allowFullScreen=""
         loading="lazy"
-      />
+      ></iframe>
 
-      <div>
-        <div className="container">
-          <div className="form-wrapper">
-            <h2 className="text-2xl font-bold text-center">
-              Jaipuri Mehandi Arts Vizag
-            </h2>
-
-            <form onSubmit={handleSendMessage}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Enter your mobile number"
-                  name="phoneNo"
-                  value={formData.phoneNo}
-                  onChange={handleChange}
-                  required
-                />
-                <textarea
-                  name="message"
-                  rows="5"
-                  placeholder="Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-                <button type="submit" className="send-btn">
-                  Send Message
-                </button>
-              </div>
-            </form>
-
-            <p className="contact-info">
-              <b>Address:</b> Jagdamba Center, Visakhapatnam - 530002
-            </p>
-            <p className="contact-info">
-              <b>Phone:</b> +91 9701262773
-            </p>
-            <p className="contact-info">
-              <b>Email:</b> d78454154@gmail.com
-            </p>
+      <div className="nm-contact-wrapper">
+        <div className="nm-contact-form-box">
+          <h2 className="nm-contact-title">Jaipuri Mehandi Arts Vizag</h2>
+          <form onSubmit={handleSendMessage}>
+            <div className="nm-contact-form">
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Enter your mobile number"
+                name="phoneNo"
+                value={formData.phoneNo}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+              <button type="submit" className="nm-contact-button">
+                Send Message
+              </button>
+            </div>
+          </form>
+          <div className="nm-contact-details">
+            <p><b>Address:</b> Jagdamba Center, Visakhapatnam - 530002</p>
+            <p><b>Phone:</b> +91 9701262773</p>
+            <p><b>Email:</b> d78454154@gmail.com</p>
           </div>
+        </div>
 
-          <div className="social-icons">
-            <NavLink to="">
-              <div className="icon-wrapper icon-facebook">
-                <TiSocialFacebook className="text-2xl" />
-              </div>
-            </NavLink>
-
-            <NavLink to="">
-              <div className="icon-wrapper icon-instagram">
-                <TiSocialInstagram className="text-2xl" />
-              </div>
-            </NavLink>
-
-            <NavLink to="">
-              <div className="icon-wrapper icon-youtube">
-                <TiSocialYoutube className="text-2xl" />
-              </div>
-            </NavLink>
-
-            <NavLink to="">
-              <div className="icon-wrapper icon-linkedin">
-                <TiSocialLinkedin className="text-2xl" />
-              </div>
-            </NavLink>
-
-            <NavLink to="">
-              <div className="icon-wrapper icon-twitter">
-                <TiSocialTwitter className="text-2xl" />
-              </div>
-            </NavLink>
-          </div>
+        <div className="nm-contact-socials">
+          <NavLink to=""><TiSocialFacebook className="nm-icon facebook" /></NavLink>
+          <NavLink to=""><TiSocialInstagram className="nm-icon instagram" /></NavLink>
+          <NavLink to=""><TiSocialYoutube className="nm-icon youtube" /></NavLink>
+          <NavLink to=""><TiSocialLinkedin className="nm-icon linkedin" /></NavLink>
+          <NavLink to=""><TiSocialTwitter className="nm-icon twitter" /></NavLink>
         </div>
       </div>
     </div>

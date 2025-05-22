@@ -1,4 +1,4 @@
-.header {
+.jaipuri-header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -8,7 +8,7 @@
   padding: 0 1.25rem;
 }
 
-.header-container {
+.jaipuri-header-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem 2rem;
@@ -17,18 +17,18 @@
   align-items: center;
 }
 
-.header-logo {
+.jaipuri-header-logo {
   width: 6rem;
   height: auto;
 }
 
-.nav-menu {
+.jaipuri-nav-menu {
   display: flex;
   align-items: center;
   background-color: transparent;
 }
 
-.nav-list {
+.jaipuri-nav-list {
   list-style: none;
   display: flex;
   align-items: center;
@@ -37,42 +37,63 @@
   padding: 0;
 }
 
-.nav-list li a {
+.jaipuri-nav-list li a {
   color: #fffefe;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+  padding-bottom: 2px;
+  
 }
-.nav-list li{
+
+.jaipuri-nav-list li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #e7a316;
+  transition: width 0.3s ease-in-out;
+}
+
+.jaipuri-nav-list li a:hover::after {
+  width: 100%;
+}
+
+
+.jaipuri-nav-list li {
   color: #000000;
 }
-.nav-list li a:hover {
+
+.jaipuri-nav-list li a:hover {
   color: #e7a316;
 }
 
-.menu-icon {
+.jaipuri-menu-icon {
   display: none;
   color: #ffffff;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* DROPDOWN MENU */
-.dropdown {
+/* Dropdown Styles */
+.jaipuri-dropdown {
   position: relative;
 }
 
-.dropdown-toggle {
+.jaipuri-dropdown-toggle {
   display: flex;
   align-items: center;
   cursor: pointer;
   color: #ffffff;
 }
 
-.dropdown-menu {
+.jaipuri-dropdown-menu {
   position: absolute;
   top: 2.5rem;
   left: 0;
-  background-color: #fffff0;
+  background-color: #296087;
   color: #4e6659;
   display: none;
   flex-direction: column;
@@ -81,23 +102,23 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown-menu span {
+.jaipuri-dropdown-menu span {
   padding: 0.5rem 0.75rem;
   cursor: pointer;
 }
 
-.dropdown-menu span:hover {
+.jaipuri-dropdown-menu span:hover {
   background-color: #e7a316;
-  color: #000000;
+  color: #fffefe;
 }
 
-.dropdown-menu.show {
+.jaipuri-dropdown-menu.show {
   display: flex;
 }
 
 /* Responsive Mobile Styles */
 @media (max-width: 639px) {
-  .nav-menu {
+  .jaipuri-nav-menu {
     position: absolute;
     top: 5rem;
     left: 0;
@@ -108,17 +129,106 @@
     display: none;
   }
 
-  .nav-menu.open {
+  .jaipuri-nav-menu.open {
     display: flex;
   }
 
-  .nav-list {
+  .jaipuri-nav-list {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
 
-  .menu-icon {
+  .jaipuri-menu-icon {
     display: block;
   }
+}
+
+
+/* Ensure header stays on top on mobile and spans full width */
+.jaipuri-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #296087;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 0 1.25rem;
+}
+
+/* Adjust container padding for mobile */
+@media (max-width: 639px) {
+  .jaipuri-header-container {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Make menu cover full width and slide down */
+  .jaipuri-nav-menu {
+    position: fixed; /* fixed instead of absolute for better UX */
+    top: 3.75rem; /* below header (6rem height approx) */
+    left: 0;
+    width: 100%;
+    background-color: #296087;
+    padding: 1rem 0;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    max-height: calc(100vh - 3.75rem);
+    overflow-y: auto;
+  }
+
+  .jaipuri-nav-menu.open {
+    display: flex;
+  }
+
+  /* Nav list vertical, centered text, and spacing */
+  .jaipuri-nav-list {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* Dropdown menu positioning inside mobile nav */
+  .jaipuri-dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #3a7bbf;
+    width: 100%;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+
+  .jaipuri-dropdown-menu span {
+    padding: 0.75rem 0;
+    display: block;
+  }
+
+  /* Show dropdown menu only when toggled */
+  .jaipuri-dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Make dropdown toggle area larger and easier to tap */
+  .jaipuri-dropdown-toggle {
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+
+  /* Hamburger icon visible */
+  .jaipuri-menu-icon {
+    display: block;
+    font-size: 1.75rem;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+/* Optional: add a smooth transition for menu open/close */
+.jaipuri-nav-menu {
+  transition: max-height 0.3s ease;
 }

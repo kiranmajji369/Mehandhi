@@ -1,120 +1,139 @@
-/* index.css */
-
-.services-section {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 5rem;
-  padding: 0 1rem;
+.jaipuri-services-section {
+  /* padding: 5rem 1rem 3rem; */
+  background-color: #ffffff;
 }
 
-.services-title-container {
-  position: relative;
-  width: fit-content;
+.jaipuri-services-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.jaipuri-services-title {
+  font-size: 2.5rem;
+  color: #2f4858;
+  margin-bottom: 0.5rem;
+}
+
+.jaipuri-title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #e7a316;
   margin: 0 auto;
+  border-radius: 4px;
 }
 
-.services-title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
+.jaipuri-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.0rem;
 }
 
-.services-title-underline {
-  position: absolute;
-  bottom: -1rem;
-  left: 0;
-  width: 2.5rem;
-  height: 0.5rem;
-  background-color: #DAA520;
-  border-radius: 0.25rem;
-}
-
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.service-card {
-  background-color: #fff;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 18rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  animation: fadeInUp 0.6s ease forwards;
-  transition: transform 0.3s ease-in-out;
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-}
-
-.service-image-container {
+.jaipuri-service-card {
+  background: #ffffff;
   border-radius: 1rem;
-  overflow: hidden;
-  width: 100%;
-  height: 14rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(24, 23, 23, 0.336);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-image {
+.jaipuri-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.jaipuri-image-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.jaipuri-service-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+  display: block;
+  border-radius: 0.5rem;
 }
 
-.service-image:hover {
-  transform: scale(1.1);
+.jaipuri-service-title {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #000000;
 }
 
-.service-title {
-  margin-top: 1rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #2d2d2d;
+.jaipuri-service-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
 }
 
-.service-description {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  color: #666;
-  padding: 0 0.5rem;
-}
-
-.enquire-button {
-  margin-top: 1rem;
-  background-color: #ecbb4a;
-  color: white;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
+.jaipuri-enquire-button {
+  background-color: #e7a316;
+  color: #fff;
   border: none;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background 0.3s ease;
 }
 
-.enquire-button:hover {
-  background-color: #e5a800;
+.jaipuri-enquire-button:hover {
+  background-color: #d18b0b;
 }
 
-/* Animation keyframes */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+/* Responsive Fixes */
+@media (max-width: 480px) {
+  .jaipuri-service-title {
+    font-size: 1.1rem;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .jaipuri-service-description {
+    font-size: 0.95rem;
+  }
+
+  .jaipuri-enquire-button {
+    width: 100%;
+    padding: 0.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .jaipuri-services-section {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .jaipuri-services-title {
+    font-size: 1.8rem;
+  }
+
+  .jaipuri-services-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 1.5rem;
+  }
+
+  .jaipuri-service-card {
+    padding: 1rem;
+  }
+
+  .jaipuri-image-wrapper {
+    height: 140px; /* smaller image height */
+  }
+
+  .jaipuri-service-title {
+    font-size: 1.2rem;
+  }
+
+  .jaipuri-service-description {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .jaipuri-enquire-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }

@@ -3,26 +3,31 @@ import About from "../aboutpage";
 import GalleryHomeSection from "../galleryhomesection";
 import HeroSection from "../herosection";
 import ServicesSection from "../servicesection";
-import "./index.css"; // Import the new CSS
+import "./index.css"; // Updated CSS filename
+import ContactUs from "../contactpage";
 
 const HomePage = () => {
   return (
-    <div className="homepage-wrapper">
-      <section className="hero-section">
+    <div className="jaipuri-homepage-wrapper">
+      <section className="jaipuri-hero-section">
         <HeroSection />
       </section>
 
-      <section className="services-section">
+      <section className="jaipuri-services-section">
         <ServicesSection />
       </section>
 
-      <section className="about-section">
+      <section className="jaipuri-about-section">
         <About />
       </section>
 
-      <section className="gallery-section">
+      <section className="jaipuri-gallery-section">
         <GalleryHomeSection />
       </section>
+
+      {/* <section className="jaipuri-contact-section">
+        <ContactUs />
+      </section> */}
     </div>
   );
 };

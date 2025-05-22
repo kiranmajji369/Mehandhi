@@ -24,24 +24,22 @@ const images = [
   { id: 20, src: "/images/extra/galleryImg20.png" },
 ];
 
-
-
 const Gallery = () => {
   return (
-    <div className="gallery-wrapper">
-      <div className="gallery-container">
-        <div className="gallery-heading">
-          <h2>Gallery</h2>
-          <span className="heading-underline"></span>
+    <div className="jaipuri-gallery-wrapper">
+      <div className="jaipuri-gallery-container">
+        <div className="jaipuri-gallery-heading">
+          <h2 className="jaipuri-gallery-title">Gallery</h2>
+          <span className="jaipuri-heading-underline"></span>
         </div>
 
-        <div className="gallery-grid">
+        <div className="jaipuri-gallery-grid">
           {images.map((img, index) => (
             <img
               key={index}
               src={img.src}
               alt={`mehndi design ${index + 1}`}
-              className="gallery-image"
+              className="jaipuri-gallery-image"
             />
           ))}
         </div>

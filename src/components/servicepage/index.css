@@ -1,96 +1,163 @@
-.services-page {
-  padding-top: 130px;
-  padding-bottom: 50px;
-  font-family: Arial, sans-serif;
-  background-color: #daa520;
+.jaipuri-services-page {
+  padding: 6rem 1rem 3rem;
+  background-color: #fafafa;
 }
 
-.container {
+.jaipuri-services-container {
   max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  margin: 0 auto;
 }
 
-.title-container {
-  position: relative;
+.jaipuri-title-block {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.page-title {
-  font-size: 32px;
-  font-weight: bold;
+.jaipuri-page-title {
+  font-size: 2.5rem;
+  color: #296087;
+  margin-bottom: 0.5rem;
 }
 
-.title-underline {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50px;
-  height: 5px;
-  background-color: #daa520;
+.jaipuri-title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #e7a316;
+  margin: 0 auto;
 }
 
-.service-content {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.jaipuri-service-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.description-section {
-  flex: 1;
-  font-size: 16px;
-  text-align: justify;
+.jaipuri-description-block {
+  margin-bottom: 2rem;
 }
 
-.contact-info {
-  margin-top: 20px;
+.jaipuri-service-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
-.highlight {
-  color: #daa520;
-  font-weight: bold;
-  cursor: pointer;
+.jaipuri-contact-info {
+  font-size: 1rem;
+  color: #444;
 }
 
-.image-preview {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+.jaipuri-highlight {
+  color: #e7a316;
+  font-weight: 600;
 }
 
-.main-image {
-  width: 80%;
-  height: 30rem;
-  object-fit: cover;
-  border-top-left-radius: 70px;
-  border-bottom-right-radius: 70px;
-}
-
-.related-container {
-  position: relative;
+.jaipuri-main-image-block {
   text-align: center;
-  margin-top: 60px;
+  margin-bottom: 2rem;
 }
 
-.related-title {
-  font-size: 20px;
-  font-weight: bold;
+.jaipuri-main-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 2px solid #e7a316;
 }
 
-.related-images {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
+.jaipuri-related-block {
+  margin-bottom: 1rem;
 }
 
-.related-image {
-  width: 250px;
-  height: 250px;
-  border-radius: 15px;
+.jaipuri-related-title {
+  font-size: 1.5rem;
+  color: #296087;
+  margin-bottom: 0.5rem;
+}
+
+.jaipuri-related-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.jaipuri-related-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.jaipuri-related-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .jaipuri-page-title {
+    font-size: 2rem;
+  }
+
+  .jaipuri-service-description,
+  .jaipuri-contact-info {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .jaipuri-services-page {
+    padding: 3rem 1rem 2rem; /* reduce vertical padding */
+  }
+
+  .jaipuri-services-container {
+    padding: 0 1rem; /* add some horizontal padding */
+  }
+
+  .jaipuri-page-title {
+    font-size: 1.8rem; /* slightly smaller title */
+  }
+
+  .jaipuri-service-description,
+  .jaipuri-contact-info {
+    font-size: 0.95rem; /* slightly smaller text for better fit */
+    line-height: 1.4;
+  }
+
+  .jaipuri-service-content {
+    padding: 1.5rem; /* reduce padding inside service content */
+    border-radius: 0.75rem;
+  }
+
+  .jaipuri-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .jaipuri-related-images {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* smaller columns */
+    gap: 0.75rem;
+  }
+
+  .jaipuri-related-image {
+    border-radius: 0.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .jaipuri-services-container {
+    max-width: 100%; /* full width on very small screens */
+  }
+
+  .jaipuri-related-images {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .jaipuri-page-title {
+    font-size: 1.5rem;
+  }
 }
