@@ -27,6 +27,7 @@ function App() {
         <Route path='/gallery' element={<Gallery />}/>
         <Route path='/galleryhomesection' element={<GalleryHomeSection />}/>
         <Route path='/homepage' element={<HomePage />}/>
+        <Route path='/' element={<HomePage />}/>
       </Routes>
       <Footer/>
     </Router>

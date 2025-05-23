@@ -41,7 +41,7 @@ const Header = () => {
                 {services.map(service => (
                   <span key={service.to}>
                     <NavLink
-                      to={`/services/${service.to}`}
+                      to={`/`}
                       onClick={() => {
                         setIsServicesOpen(false);
                         setIsNavOpen(false);

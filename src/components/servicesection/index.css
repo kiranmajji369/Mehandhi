@@ -25,7 +25,7 @@
 .jaipuri-services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.0rem;
+  gap: 1.8rem;
 }
 
 .jaipuri-service-card {
@@ -43,7 +43,7 @@
 }
 
 .jaipuri-image-wrapper {
-  width: 100%;
+  width: 90%;
   height: 180px;
   overflow: hidden;
   margin-bottom: 1rem;
